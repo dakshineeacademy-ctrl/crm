@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - Nexus CRM</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-40 bg-white/80 backdrop-blur-md border-b border-slate-200 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="bg-brand-600 p-1.5 rounded-lg text-white">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight">Nexus<span class="text-brand-600">CRM</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                    <a href="features.html" class="hover:text-brand-600 transition-colors">Features</a>
+                    <a href="solutions.html" class="hover:text-brand-600 transition-colors">Solutions</a>
+                    <a href="pricing.html" class="hover:text-brand-600 transition-colors">Pricing</a>
+                    <a href="contact.html" class="hover:text-brand-600 transition-colors">Contact</a>
+                    <a href="signup.html"
+                        class="bg-slate-900 text-white px-4 py-2 rounded-full hover:bg-slate-800 transition-all hover:shadow-lg hover:shadow-slate-900/20">Get
+                        Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 animate-fade-in-up">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-slate-900">
+                    Solutions for every <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">industry
+                        and scale.</span>
+                </h1>
+                <p class="text-lg text-slate-600">
+                    Whether you're a startup or an enterprise, NexusCRM adapts to your unique
+                    workflow.
+                </p>
+            </div>
+
+            <div class="space-y-20">
+                <!-- Solution 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-12 animate-fade-in-up delay-100">
+                    <div class="flex-1">
+                        <div class="bg-orange-100 text-orange-600 w-fit px-3 py-1 rounded-full text-xs font-bold mb-4">
+                            FOR STARTUPS</div>
+                        <h2 class="text-3xl font-bold mb-4">Scale from zero to hero</h2>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            Stop using spreadsheets. Get organized with a CRM that grows with you.
+                            Automate outreach and
+                            focus on closing your first 100 customers.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2 text-slate-700">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i>
+                                Free for up to 3 users
+                            </li>
+                            <li class="flex items-center gap-2 text-slate-700">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i>
+                                Basic email automation
+                            </li>
+                            <li class="flex items-center gap-2 text-slate-700">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i>
+                                Pipeline visualization
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex-1 bg-gradient-to-br from-orange-50 to-white p-8 rounded-3xl border border-orange-100 shadow-lg">
+                        <!-- Abstract Visual -->
+                        <div
+                            class="aspect-video bg-white rounded-xl shadow-sm border border-orange-50 flex items-center justify-center">
+                            <i data-lucide="rocket" class="w-16 h-16 text-orange-400"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 animate-fade-in-up delay-100">
+                    <div class="flex-1">
+                        <div class="bg-indigo-100 text-indigo-600 w-fit px-3 py-1 rounded-full text-xs font-bold mb-4">
+                            FOR ENTERPRISE</div>
+                        <h2 class="text-3xl font-bold mb-4">Global sales orchestration</h2>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            Manage thousands of leads across multiple territories. Advanced
+                            permissions, SSO, and custom
+                            AI model training.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2 text-slate-700">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i>
+                                Unlimited users & roles
+                            </li>
+                            <li class="flex items-center gap-2 text-slate-700">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i>
+                                Dedicated success manager
+                            </li>
+                            <li class="flex items-center gap-2 text-slate-700">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i>
+                                99.99% SLA uptime
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex-1 bg-gradient-to-br from-indigo-50 to-white p-8 rounded-3xl border border-indigo-100 shadow-lg">
+                        <!-- Abstract Visual -->
+                        <div
+                            class="aspect-video bg-white rounded-xl shadow-sm border border-indigo-50 flex items-center justify-center">
+                            <i data-lucide="globe" class="w-16 h-16 text-indigo-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

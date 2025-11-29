@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Nexus CRM</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-brand-500 selection:text-white">
+
+    <div class="min-h-screen flex flex-col md:flex-row">
+        <!-- Left Side: Branding -->
+        <div
+            class="hidden md:flex flex-col justify-between w-1/2 bg-slate-900 p-12 text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-900 to-slate-900 opacity-50"></div>
+            <div class="relative z-10">
+                <a href="index.html" class="flex items-center gap-2 mb-12">
+                    <div class="bg-brand-600 p-1.5 rounded-lg text-white">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight">Nexus<span class="text-brand-600">CRM</span></span>
+                </a>
+                <h2 class="text-5xl font-bold leading-tight mb-6">
+                    Join the future of <br> sales automation.
+                </h2>
+                <p class="text-slate-400 text-lg max-w-md">
+                    "NexusCRM helped us triple our pipeline in just 3 months. The AI features are like magic."
+                </p>
+            </div>
+            <div class="relative z-10 flex items-center gap-4">
+                <div class="flex -space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-slate-700 border-2 border-slate-900"></div>
+                    <div class="w-10 h-10 rounded-full bg-slate-600 border-2 border-slate-900"></div>
+                    <div class="w-10 h-10 rounded-full bg-slate-500 border-2 border-slate-900"></div>
+                </div>
+                <div class="text-sm text-slate-400">
+                    Trusted by 10,000+ sales teams
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="flex-1 flex items-center justify-center p-8">
+            <div class="w-full max-w-md animate-fade-in-up">
+                <div class="md:hidden mb-8">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="bg-brand-600 p-1.5 rounded-lg text-white">
+                            <i data-lucide="zap" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-bold text-xl tracking-tight">Nexus<span
+                                class="text-brand-600">CRM</span></span>
+                    </a>
+                </div>
+
+                <div class="mb-8">
+                    <h1 class="text-2xl font-bold text-slate-900 mb-2">Create your account</h1>
+                    <p class="text-slate-600">Start your 14-day free trial. No credit card required.</p>
+                </div>
+
+                <!-- Google Sign Up -->
+                <button onclick="handleGoogleLogin()"
+                    class="w-full flex items-center justify-center gap-3 bg-white border border-slate-300 text-slate-700 font-medium py-3 rounded-xl hover:bg-slate-50 transition-all mb-6">
+                    <img src="https://www.google.com/favicon.ico" alt="Google" class="w-5 h-5">
+                    Sign up with Google
+                </button>
+
+                <div class="relative mb-6">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-slate-200"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-slate-50 text-slate-500">Or sign up with email</span>
+                    </div>
+                </div>
+
+                <form class="space-y-4" onsubmit="event.preventDefault(); handleEmailLogin();">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
+                            <input type="text"
+                                class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                                placeholder="John">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
+                            <input type="text"
+                                class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                                placeholder="Doe">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Work Email</label>
+                        <input type="email"
+                            class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                            placeholder="john@company.com">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Password</label>
+                        <input type="password"
+                            class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                            placeholder="••••••••">
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-brand-600 text-white font-medium py-3 rounded-xl hover:bg-brand-700 transition-all shadow-lg shadow-brand-500/30 mt-2">
+                        Create Account
+                    </button>
+                </form>
+
+                <p class="text-center text-sm text-slate-500 mt-8">
+                    Already have an account? <a href="login.html" class="text-brand-600 font-medium hover:underline">Log
+                        in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
